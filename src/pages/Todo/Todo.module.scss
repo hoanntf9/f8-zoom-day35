@@ -1,0 +1,85 @@
+.heading {
+  color: #333;
+  font-size: 3.2rem;
+}
+
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 380px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+}
+
+.addTodo {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+.addTodo input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px 0 0 8px;
+}
+
+.addTodo button {
+  padding: 12px 18px;
+  border: none;
+  background: #2f8f83;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.todoInputLable {
+  display: flex;
+  justify-content: center;
+}
+
+.todoEmpty {
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoItem.completed {
+  text-decoration: line-through;
+  color: #808080;
+  opacity: 0.7;
+}
+
+.todoDetele {
+  color: #fa6a6a;
+  cursor: pointer;
+  background: transparent;
+}
