@@ -5,5 +5,5 @@ import jsconfigPaths from 'vite-jsconfig-paths';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), jsconfigPaths()],
-  base: '/f8-zoom-day35/',
+  base: "/f8-zoom-day35/",
 });
