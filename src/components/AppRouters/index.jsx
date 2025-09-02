@@ -9,7 +9,7 @@ import Profile from "@/pages/Profile";
 import Products from "@/pages/Products";
 import Comments from "@/pages/Comments";
 import Weather from "@/pages/Weather";
-import ButtonUI from "@/pages/ButtonUI";
+import Buttons from "@/pages/Buttons";
 function AppRouters() {
   return (
     <HashRouter>
@@ -23,7 +23,7 @@ function AppRouters() {
         <Route path="/products" element={<Products />} />
         <Route path="/comments" element={<Comments />} />
         <Route path="/weather" element={<Weather />} />
-        <Route path="/buttonUI" element={<ButtonUI />} />
+        <Route path="/buttons" element={<Buttons />} />
       </Routes>
 
     </HashRouter>

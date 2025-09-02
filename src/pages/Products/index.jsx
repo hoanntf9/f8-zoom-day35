@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import styles from "./Products.module.scss";
 import { MdOutlineClose } from "react-icons/md";
-import Buttons from "../Buttons";
+import Button from "../Button";
 
 function Products() {
   const [posts, setPosts] = useState([]);
@@ -70,7 +70,7 @@ function Products() {
                 <h3>ID: {post.id}</h3>
                 <h4>Title: {post.title}</h4>
                 <p className={styles.cardBody} title={post.body}>{truncateStr(post.body)}</p>
-                <Buttons onClick={() => detailProduct(post)}>Xem chi tiết</Buttons>
+                <Button onClick={() => detailProduct(post)}>Xem chi tiết</Button>
               </div>
             ))
           }

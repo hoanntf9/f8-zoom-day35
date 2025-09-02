@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Counter.module.scss";
 
-import Buttons from "../Buttons";
+import Button from "../Button";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -27,9 +27,9 @@ function Counter() {
     </div>
 
     <div className={styles.wrapper}>
-      <Buttons className={styles.btn} secondary onClick={decrease}>Giảm (-1)</Buttons>
-      <Buttons className={styles.btn} onClick={reset}>Reset (0)</Buttons>
-      <Buttons className={styles.btn} primary onClick={increase}>Tăng (+1)</Buttons>
+      <Button className={styles.btn} secondary onClick={decrease}>Giảm (-1)</Button>
+      <Button className={styles.btn} onClick={reset}>Reset (0)</Button>
+      <Button className={styles.btn} primary onClick={increase}>Tăng (+1)</Button>
     </div>
   </>;
 }

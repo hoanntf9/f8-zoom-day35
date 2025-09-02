@@ -9,7 +9,7 @@ const navItems = [
   { to: "/Products", title: "Products" },
   { to: "/Comments", title: "Comments" },
   { to: "/Weather", title: "Weather" },
-  { to: "/ButtonUI", title: "ButtonUI" },
+  { to: "/Buttons", title: "Buttons" },
 ];
 
 function Navigation() {

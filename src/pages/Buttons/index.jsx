@@ -1,50 +1,50 @@
-import clsx from "clsx";
-import PropTypes from "prop-types";
-
+import Button from "../Button";
 import styles from "./Buttons.module.scss";
 
-function Buttons({
-  children,
-  primary = false,
-  secondary = false,
-  rounded = false,
-  bordered = false,
-  href,
-  size = "medium",
-  className = "",
-  onClick,
-  ...passProps
-}) {
-  const classNames = clsx(styles.wrapper, className, styles[size], {
-    [styles.primary]: primary,
-    [styles.secondary]: secondary,
-    [styles.rounded]: rounded,
-    [styles.bordered]: bordered,
-  });
+function Buttons() {
+  return <div className={styles.container}>
 
-  const Component = href ? "a" : "button";
+    <div className={styles.buttonGroup}>
+      <Button>Click me</Button>
+      <Button primary>Primary</Button>
 
-  return (
-    <Component
-      {...passProps}
-      href={href}
-      className={classNames}
-      onClick={onClick}
-    >
-      {children}
-    </Component>
-  );
+      <Button href="https://google.com" target="_blank">
+        Go to Google
+      </Button>
+
+      <Button size="small">Small</Button>
+      <Button size="medium">Medium</Button>
+      <Button size="large">Large</Button>
+
+      <Button bordered>Bordered</Button>
+      <Button rounded>Rounded</Button>
+      <Button primary rounded>Primary Rounded</Button>
+    </div>
+
+
+    <div className={styles.buttonGroup}>
+      <Button onClick={() => alert('Clicked!')}>
+        Click Alert
+      </Button>
+
+      <Button disabled onClick={() => alert('Should not show')}>
+        Disabled Button
+      </Button>
+
+
+      <Button loading onClick={() => console.log('Should not log')}>
+        Loading Button
+      </Button>
+
+      <Button className={styles.btnCustom} primary>
+        Custom Styled
+      </Button>
+
+      <Button primary>
+        <span>📧</span> Send Email
+      </Button>
+    </div>
+  </div>;
 }
-
-Buttons.propTypes = {
-  children: PropTypes.node.isRequired,
-  primary: PropTypes.bool,
-  rounded: PropTypes.bool,
-  bordered: PropTypes.bool,
-  href: PropTypes.string,
-  size: PropTypes.string,
-  className: PropTypes.string,
-  onClick: PropTypes.func
-};
 
 export default Buttons;

@@ -4,7 +4,7 @@ import styles from "./Profile.module.scss";
 
 import avatarUrl from "/avatar.png";
 
-import Buttons from "../Buttons";
+import Button from "./../Button";
 function Profile() {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
@@ -44,7 +44,7 @@ function Profile() {
               <p className={styles.cardItem}><strong>Website:</strong> {user.website}</p>
               <p className={styles.cardItem}><strong>Address:</strong> {user?.address?.street} - {user?.address?.city}</p>
 
-              <Buttons bordered className={styles.btnViewMore}>View More</Buttons>
+              <Button bordered className={styles.btnViewMore}>View More</Button>
             </div>
           </div>
         </div>
